@@ -110,10 +110,6 @@ a {
     height: 85%;
 }
 
-.box1:hover .descripcion {
-    opacity: 1;
-}
-
 .box1:hover .fa-truck {
     transform: rotateZ(-90deg);
 }
@@ -162,8 +158,12 @@ body img {
 }
 
 .descripcion {
-    width: 100%;
-    opacity: 0;
+    display: inline-block;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.3);
+    position: absolute;
+    top: -45px;
+    left: 0;
 }
 
 .in-box {
@@ -230,6 +230,7 @@ body img {
 .button-div {
     display: flex;
     justify-content: flex-end;
+    flex-wrap: wrap;
 }
 
 .button-input {
@@ -237,14 +238,15 @@ body img {
     border: none;
     border-radius: 6px;
     padding: 7px;
+    margin: 5px;
     color: #FFF;
-    width: 30%;
-    margin: 5px 0 5px 10px;
+    width: 100%;
     cursor: pointer;
     transition: all 0.5s;
+    max-width: 150px;
 }
 
-.button-input:hover{
+.button-input:hover {
     background-color: #0022AA;
 }
 
@@ -255,9 +257,10 @@ footer {
     padding: 10px;
     text-align: center;
 }
-.footer-advices{
+
+.footer-advices {
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: column wrap;
     justify-content: center;
 }
 
@@ -268,17 +271,17 @@ footer .fa-solid {
 }
 
 footer article {
-    width: 30%;
     margin-bottom: 20px;
     padding: 10px;
 }
 
-footer #copyright{
+footer #copyright {
     text-align: left;
     color: #666666;
     font-size: 14px;
     font-weight: lighter;
 }
+
 
 @media(min-width: 768px) {
     #main-header {
@@ -318,6 +321,27 @@ footer #copyright{
     .right-navbar li {
         margin: 0 5px
     }
+
+    .descripcion{
+        position: static;
+        background: none;
+        opacity: 0;
+        transition: all 0.5s;
+    }
+
+    .box1:hover .descripcion{
+        opacity: 1;
+    }
+
+    .footer-advices {
+        flex-direction: row;
+    }
+
+    .footer-advices article {
+        width: 30%;
+        min-width: 240px;
+        max-width: 450px;
+    }
 }
 
 @media(min-width: 1200px) {
@@ -344,4 +368,3 @@ footer #copyright{
         overflow: hidden;
     }
 }
-
