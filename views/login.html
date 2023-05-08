@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi primer HTML</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+
+<body>
+    <header id="main-header">
+        <section class="main-header-top-bar">
+            <a id="logo" href="/"><img src="/img/logo-mercado-liebre.svg"></a>
+            <form id="search-bar" action="/" method="post">
+                <input type="text" placeholder="Buscar productos, marcas y más" name="buscador">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </form>
+            <div id="copy-header">
+                <h3><i class="fa-solid fa-hand-holding-dollar"></i>Compra en cuotas y sin tarjeta de crédito</h3>
+            </div>
+        </section>
+
+        <div class="burger-menu">
+            <i class="fas fa-bars"></i>
+        </div>
+
+        <nav class="main-header-bottom-bar">
+            <ul class="left-navbar">
+                <li><a href="#Ofertas">Ofertas</a></li>
+                <li><a href="">Tiendas oficiales</a></li>
+                <li><a href="">Vender</a></li>
+                <li><a href="">Ayuda</a></li>
+            </ul>
+            <ul class="right-navbar">
+                <li><a id="register" href="/register">Creá tu cuenta<i class="fa-solid fa-address-card"></i></a></li>
+                <li><a id="login" href="/login">Ingresá<i class="fa-solid fa-arrow-right-to-bracket"></i></a></li>
+                <li><a href="">Mis compras<i class="fa-solid fa-basket-shopping"></i></a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="register">
+            <div class="form-title">
+                <h1>Ingresá a tu cuenta</h1>
+            </div>
+            <form action="/" method="get">
+                <div>
+                    <input class="wide-input" placeholder="Usuario" type="text" name="usuario">
+                </div>
+                <div>
+                    <input class="wide-input" placeholder="Contraseña" type="password" name="contraseña">
+                </div>
+                <div class="button-div">
+                    <input class="button-input" type="submit" value="Ingresar">
+                </div>
+            </form>
+        </section>
+    </main>
+</body>
