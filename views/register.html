@@ -49,20 +49,20 @@
             </div>
                 <form action="/" method="post">
                     <div>
-                        <input class="wide-input" type="text" placeholder="Nombre y apellido" name="nombre-y-apellido" pattern="[a-zA-Z]">
+                        <input class="wide-input" type="text" placeholder="Nombre y apellido" name="nombre-y-apellido" pattern="[a-zA-Z]" required>
                     </div>
                     <div>
-                        <input class="wide-input" type="text" placeholder="Nombre de usuario" name="usuario"  pattern="[\w]">
+                        <input class="wide-input" type="text" placeholder="Nombre de usuario" name="usuario"  pattern="[\w]" required> 
                     </div>
                     <div>
-                        <input class="wide-input" type="email" placeholder="E-mail" name="email" pattern="/^\w+([.-_+]?\w+)*@\w+([.-]?\w+)*(\.\w{2,10})+$/">
+                        <input class="wide-input" type="email" placeholder="E-mail" name="email" required pattern="/^\w+([.-_+]?\w+)*@\w+([.-]?\w+)*(\.\w{2,10})+$/">
                     </div>
                     <h4>Fecha de Nacimiento</h4>
                     <div>
-                        <input class="wide-input" type="date" placeholder="mm/dd/yyyy" name="nacimiento">
+                        <input class="wide-input" type="date" placeholder="mm/dd/yyyy" name="nacimiento" required>
                     </div>
                     <div>
-                        <input class="wide-input" type="text" placeholder="Domicilio" name="domicilio">
+                        <input class="wide-input" type="text" placeholder="Domicilio" name="domicilio" required>
                     </div>
                     <h4>Perfil del usuario</h4>
                     <div class="option-input">
