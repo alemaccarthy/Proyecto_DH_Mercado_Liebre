@@ -118,6 +118,14 @@ a {
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
 }
 
+.box1 img{
+    padding: 1.5vw;
+}
+
+.box1 a {
+    padding: 0;
+}
+
 .box2 {
     display: flex;
     flex-wrap: wrap;
@@ -160,7 +168,7 @@ body img {
 .descripcion {
     display: inline-block;
     padding: 10px;
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(0, 0, 0, 0.15);
     position: absolute;
     top: -45px;
     left: 0;
