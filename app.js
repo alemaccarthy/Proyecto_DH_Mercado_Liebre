@@ -4,8 +4,9 @@ const mainRouter = require('./routers/mainRoutes');
 const productRouter = require('./routers/productRoutes');
 const userRouter = require('./routers/userRoutes');
 
-
 const app = express();
+
+app.set('view engine', 'ejs');
 
 app.use(express.static('public'))
 
