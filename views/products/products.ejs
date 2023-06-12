@@ -6,6 +6,46 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <%- include('../partials/header') %>
+
+        <main>
+            <section class="banner-list">
+                <img src="imgs/samsung/banner-samsung/galaxy-s23-accessories-chargers-kv.avif" alt="">
+            </section>
+
+            <section class="products-container">
+
+                <%products.forEach(el=> {%>
+                    <%if(el.deleted === false){%>
+                    <a class="selected-products" href="/products/<%= el.id %>/detail">
+                        <article>
+                            <div class="box-img-product">
+                                <img class="imagen-producto"
+                                    src="<%= el.images %>"
+                                    alt="product">
+                            </div>
+
+                            <div>
+                                <h2 class="product-title">
+                                    <%= el.title %>
+                                </h2>
+                                <p class="product-price">$<%= el.price %>
+                                </p>
+                            </div>
+                        </article>
+                    </a>
+                    <% } } ) %>
+            </section>
+
+            <section class="presentation-product-container">
+                <section class="presentation-product">
+                    <h1 class="smartphone-title-list">Galaxy Z</h1>
+                    <video autoplay loop muted plays-inline="">
+                        <source src="/videos/galaxy-z4-fold-and-flip.mp4" type="video/mp4">
+                    </video>
+                </section>
+            </section>
+        </main>
+        <%- include('../partials/footer') %>
 </body>
 </html>

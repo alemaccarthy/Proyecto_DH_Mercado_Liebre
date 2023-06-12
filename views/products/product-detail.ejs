@@ -1,11 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-    
+    <main>
+        <%- include('../partials/header.ejs') %>
+
+            <section class="update-container">
+                <div class="update-button">
+                    <button><a href="/products/<%= product.id %>/update">Editar producto</a></button>
+                </div>
+            </section>
+
+            <section class="product-detail-container">
+                <article class="img-container">
+                    <img class="main-img" src="<%= product.images %>" alt="producto">
+                </article>
+
+                <section class="detail-container">
+                    <h1 class="title-selected-product">
+                        <%= product.title %>
+                    </h1>
+                    <p class="product-price">$<%= product.price %>
+                    </p>
+                    <h6 class="shipping-text">Envío gratis<i class="fa-solid fa-truck"></i></h6>
+                    <p class="product-info">
+                        <%= product.description %>
+                    </p>
+                </section>
+                <section class="more-info-button">
+                    <button>Más información</button>
+                </section>
+            </section>
+            <section class="floating-buttons">
+                <button class="buy-button">Comprar ahora</button>
+                <button class="addToCart-button">Agregar al carrito</button>
+            </section>
+    </main>
+
+    <%- include('../partials/footer.ejs') %>
+
 </body>
+
 </html>

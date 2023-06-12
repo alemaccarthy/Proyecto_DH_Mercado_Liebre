@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('../partials/head') %>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+
+<body>
+
+    <%- include('../partials/header') %>
+
+        <main>
+            <section class="form-container-create">
+                <h1>Creá un nuevo producto</h1>
+                <form action="/products/create" method="post">
+                    <%- include('../partials/formProduct') %>
+                    <section class="buttons">
+                        <input type="submit" value="Crear producto">
+                        <input type="reset" value="Restablecer">
+                    </section>
+                </form>
+            </section>
+        </main>
+</body>
+
+<%- include('../partials/footer') %>
+
+</html>

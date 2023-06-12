@@ -4,8 +4,15 @@ const path = require('path');
 const productController = require('../controllers/productController');
 
 // @ GET /products
-Router.get('/', productController.getProducts);
+productRouter.get('/', productController.getProducts);
 
-Router.get('/:id/detail', productController.getProductDetail);
+// @GET /products/:id/detail
+productRouter.get('/:id/detail', productController.getProductDetail);
+
+// @GET /products/:id/update
+productRouter.get('/:id/update', productController.getUpdate);
+
+// @GET /products/create
+productRouter.get('/create', productController.getCreate);
 
 module.exports = productRouter;
