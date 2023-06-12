@@ -7,14 +7,18 @@ const userRouter = require('./routers/userRoutes');
 const app = express();
 
 app.set('view engine', 'ejs');
+app.set('views', [
+    path.join(__dirname, '/views/products'),
+    path.join(__dirname, '/views/user'),
+])
 
-app.use(express.static('public'))
+app.use(express.static('public'));
 
 
 // ROUTERS
 app.use(mainRouter);
-app.use(productRouter);
-app.use(userRouter);
+app.use('/products', productRouter);
+app.use('/user', userRouter);
 
 app.listen(3000, () => {
     console.log(`Escuchando http://localhost:3000`);

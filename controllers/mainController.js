@@ -1,6 +1,6 @@
 const mainController = {
     getIndex(req, res){
-        res.render('index');
+        res.render('index', {title: '| Mercado liebre'});
     }
 }
 
