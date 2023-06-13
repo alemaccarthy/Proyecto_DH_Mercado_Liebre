@@ -1,13 +1,14 @@
 const express = require('express');
 const path = require('path');
-const mainRouter = require('./routers/mainRoutes');
-const productRouter = require('./routers/productRoutes');
-const userRouter = require('./routers/userRoutes');
+const mainRouter = require('./routers/mainRouter');
+const productRouter = require('./routers/productRouter');
+const userRouter = require('./routers/userRouter');
 
 const app = express();
 
 app.set('view engine', 'ejs');
 app.set('views', [
+    path.join(__dirname, '/views'),
     path.join(__dirname, '/views/products'),
     path.join(__dirname, '/views/user'),
 ])

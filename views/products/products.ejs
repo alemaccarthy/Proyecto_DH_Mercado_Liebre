@@ -1,50 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+    <%- include('../partials/head') %>
+
 <body>
     <%- include('../partials/header') %>
 
         <main>
-            <section class="banner-list">
-                <img src="imgs/samsung/banner-samsung/galaxy-s23-accessories-chargers-kv.avif" alt="">
+            <section>
+                <img src="/images/img-home-banner.jpg" alt="">
             </section>
 
             <section class="products-container">
 
-                <%products.forEach(el=> {%>
-                    <%if(el.deleted === false){%>
-                    <a class="selected-products" href="/products/<%= el.id %>/detail">
+                    <a class="selected-products" href="">
                         <article>
                             <div class="box-img-product">
                                 <img class="imagen-producto"
-                                    src="<%= el.images %>"
+                                    src="/images/img-cafetera-moulinex.jpg"
                                     alt="product">
                             </div>
 
                             <div>
-                                <h2 class="product-title">
-                                    <%= el.title %>
-                                </h2>
-                                <p class="product-price">$<%= el.price %>
-                                </p>
+                                <h2 class="product-title">Cafetera</h2>
+                                <p class="product-price">$20500</p>
                             </div>
                         </article>
                     </a>
-                    <% } } ) %>
+                    <a class="selected-products" href="">
+                        <article>
+                            <div class="box-img-product">
+                                <img class="imagen-producto"
+                                    src="/images/img-cafetera-moulinex.jpg"
+                                    alt="product">
+                            </div>
+
+                            <div class="details-container">
+                                <h2 class="product-title">Cafetera</h2>
+                                <p class="product-price">$20500</p>
+                            </div>
+                        </article>
+                    </a>
             </section>
 
-            <section class="presentation-product-container">
+<!--             <section class="presentation-product-container">
                 <section class="presentation-product">
                     <h1 class="smartphone-title-list">Galaxy Z</h1>
-                    <video autoplay loop muted plays-inline="">
-                        <source src="/videos/galaxy-z4-fold-and-flip.mp4" type="video/mp4">
-                    </video>
                 </section>
-            </section>
+            </section> -->
         </main>
         <%- include('../partials/footer') %>
 </body>
