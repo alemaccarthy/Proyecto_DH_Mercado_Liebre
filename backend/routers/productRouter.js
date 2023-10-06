@@ -27,6 +27,12 @@ productRouter.get('/:id/detail', productController.getProductDetail);
 // @GET /products/:id/update
 productRouter.get('/:id/update', productController.getUpdate);
 
+// @PUT /products/:id/update
+productRouter.put('/:id/update', productController.updateProduct);
+
+// @PUT /products/:id/update
+productRouter.delete('/:id/delete', productController.deleteProduct);
+
 // @GET /products/create
 productRouter.get('/create', productController.getCreate);
 
