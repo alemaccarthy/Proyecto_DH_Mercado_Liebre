@@ -1,7 +1,7 @@
 const { Product } = require('../database/models');
 const { Op, Sequelize } = require('sequelize');
 
-module.exports =  productController = {
+const productController = {
     getProducts(req, res){
         res.render('products', {title: '| Productos'});
     },
@@ -69,3 +69,5 @@ module.exports =  productController = {
             console.log(error);
         }}
 };
+
+module.exports = productController;
